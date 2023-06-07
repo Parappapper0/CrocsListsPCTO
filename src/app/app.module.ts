@@ -8,13 +8,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './module/material/material.module';
 import { ListaComponent } from './components/lista/lista.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ListCardComponent } from './components/list-card/list-card.component';
+import { ListSelectionPageComponent } from './components/list-selection-page/list-selection-page.component';
+import { ListViewPageComponent } from './components/list-view-page/list-view-page.component';
+import { SettingsPageComponent } from './components/settings-page/settings-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ElementoComponent,
     ListaComponent,
-    ElementoComponent
+    ElementoComponent,
+    NavBarComponent,
+    ListCardComponent,
+    ListSelectionPageComponent,
+    ListViewPageComponent,
+    SettingsPageComponent
   ],
   imports: [
     BrowserModule,
