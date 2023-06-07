@@ -1,0 +1,23 @@
+div {
+
+    display: flex;
+    border: 2px solid black;
+    border-radius: 25px;
+    width: fit-content;
+    padding: 2px;
+    align-items: center;
+    margin: 10px;
+}
+
+button {
+
+    width: min-content;
+    height: min-content;
+    margin: 4px;
+}
+
+.checked {
+
+    text-decoration: line-through;
+    background-color: #bbb;
+}
