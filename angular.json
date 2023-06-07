@@ -30,9 +30,13 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/scss/bootstrap.min.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              " node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,9 +97,13 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/scss/bootstrap.min.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              " node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           }
         }
       }
