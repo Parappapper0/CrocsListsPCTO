@@ -1,22 +1,12 @@
-<!--mat-card>
-    <mat-card-title>
-        <span>
-            <input matInput value="{{titolo}}" />
+<div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+    <mat-card class="componente-rettangolo">
+        <mat-card-title>
+            <input [(ngModel)]="titolo" />
             <button mat-mini-fab color="warn" (click)="onShare()"><mat-icon>share</mat-icon></button>
-            <button mat-mini-fab color="warn" (click)="onDelete()"><mat-icon>close</mat-icon></button>
-        </span>
-    </mat-card-title>
-
-    <mat-card-content>
-        <span class = "dotdotdot">{{elementiToString()}}</span>
-    </mat-card-content>
-</mat-card-->
-<div class="componente-rettangolo">
-  <h2>Titolo</h2>
-  <div class="sottorettangolo">
-    <h3>Lorem ipsum dolor</h3>
-    <h3>Lorem ipsum dolor</h3>
-    <h3>Lorem ipsum dolor</h3>
-  </div>
+            <button class="second" mat-mini-fab color="warn" (click)="onDelete()"><mat-icon>close</mat-icon></button>
+        </mat-card-title>
+        <mat-card-content class="sottorettangolo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aperiam explicabo eligendi quasi hic animi repellat dignissimos asperiores corporis sit, libero quia! Perferendis quasi ea vel facilis eius aliquid ipsam?
+        </mat-card-content>
+    </mat-card>
 </div>
-

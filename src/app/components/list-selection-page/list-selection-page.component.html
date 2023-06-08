@@ -1,1 +1,11 @@
-<p>list-selection-page works!</p>
+<div>
+
+    <div *ngFor="let list of lists; index as i">
+        <app-list-card titolo="{{list.titolo}}" index="{{i}}" (deleteListEvent)="onDelete($event)"></app-list-card>
+    </div>
+
+    <div>
+        <button mat-fab color="accent" (click)="onAdd()"><mat-icon>add</mat-icon></button>
+    </div>
+
+</div>
