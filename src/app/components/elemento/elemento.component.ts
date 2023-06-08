@@ -13,8 +13,7 @@ export class ElementoComponent {
     @Output() deleteEvent = new EventEmitter<number>();
 
     onDelete() {
-        
-        alert(this.content)
+
         this.deleteEvent.emit(parseInt(this.index));
     }
     checked : boolean = false;
