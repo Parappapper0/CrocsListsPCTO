@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
     selector: 'app-elemento',
@@ -7,13 +8,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ElementoComponent {
 
-    @Input() content : string = '';
+    content : string = '';
     @Input() index : string = "-1";
 
     @Output() deleteEvent = new EventEmitter<number>();
 
     onDelete() {
         
+        alert(this.content)
         this.deleteEvent.emit(parseInt(this.index));
     }
     checked : boolean = false;

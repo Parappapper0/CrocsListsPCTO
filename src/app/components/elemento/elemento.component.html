@@ -1,5 +1,7 @@
 <div>
     <mat-checkbox (change)="checked = !checked"></mat-checkbox>
-    <input [ngClass]="{'checked' : checked}" matInput placeholder="Insert element name" value="{{content}}" />
+    <form #formRef="ngForm">
+    <input [ngClass]="{'checked' : checked}" matInput placeholder="Insert element name" [(ngModel)]="content" />
     <button mat-mini-fab color="warn" (click)="onDelete()"><mat-icon>close</mat-icon></button>
+    </form>
 </div>  

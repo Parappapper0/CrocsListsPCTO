@@ -17,6 +17,7 @@ export class ListCardComponent {
     onShare() {
 
         alert("Pensavi davvero che facesse qualcosa?")
+        alert(this.titolo);
     }
 
     onDelete() {
@@ -27,8 +28,9 @@ export class ListCardComponent {
     elementiToString(): string {
         let s : string = "";
         this.elementi.forEach(element => {
-           s += element.valore; 
+           s += (element.valore + ', '); 
         });
+        s = s.slice(0, -2);
         return s;
     }
 }
