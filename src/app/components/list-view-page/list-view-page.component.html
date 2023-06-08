@@ -1,1 +1,11 @@
-<p>list-view-page works!</p>
+<div>
+
+    <div *ngFor="let element of elements; index as i">
+        <app-elemento content="{{element.valore}}" index="{{i}}" (deleteEvent)="onDelete($event)"></app-elemento>
+    </div>
+
+    <div>
+        <button mat-fab color="accent" (click)="onAdd()"><mat-icon>add</mat-icon></button>
+    </div>
+
+</div>
