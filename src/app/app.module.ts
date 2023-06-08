@@ -14,7 +14,6 @@ import { ListCardComponent } from './components/list-card/list-card.component';
 import { ListSelectionPageComponent } from './components/list-selection-page/list-selection-page.component';
 import { ListViewPageComponent } from './components/list-view-page/list-view-page.component';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
-import { ProvComponent } from './prov/prov.component';
 
 
 @NgModule({
@@ -26,8 +25,7 @@ import { ProvComponent } from './prov/prov.component';
       ListCardComponent,
       ListSelectionPageComponent,
       ListViewPageComponent,
-      SettingsPageComponent,
-      ProvComponent
+      SettingsPageComponent
     ],
     imports: [
       BrowserModule,
