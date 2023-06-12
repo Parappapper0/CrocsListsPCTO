@@ -1,11 +1,17 @@
-<div>
+<div class="row">
 
     <div *ngFor="let list of lists; index as i">
         <app-list-card titolo="{{list.titolo}}" index="{{i}}" (deleteListEvent)="onDelete($event)"></app-list-card>
     </div>
 
-    <div>
-        <button mat-fab color="accent" (click)="onAdd()"><mat-icon>add</mat-icon></button>
+    <div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+        <mat-card class="componente-rettangolo">
+            <mat-card-title>
+                <span class="cardTitle"> Nuova Lista </span>
+            </mat-card-title>
+            <mat-card-content class="sottorettangolo">
+                <button mat-fab color="accent" (click)="onAdd()"><mat-icon>add</mat-icon></button>
+            </mat-card-content>
+        </mat-card>
     </div>
-
 </div>
