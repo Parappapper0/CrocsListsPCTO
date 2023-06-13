@@ -1,10 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Elemento } from 'src/app/models/elemento';
+import { ListManagerService } from 'src/app/services/list-manager.service';
 
 @Component({
   selector: 'app-list-card',
   templateUrl: './list-card.component.html',
-  styleUrls: ['./list-card.component.scss']
+  styleUrls: ['./list-card.component.scss'],
+  providers: [ListManagerService]
 })
 export class ListCardComponent {
 
@@ -13,6 +15,8 @@ export class ListCardComponent {
     @Input() elementi: Elemento[] = [];
 
     @Output() deleteListEvent = new EventEmitter<number>();
+
+    constructor(protected listManager : ListManagerService) { }
 
     onShare() {
 

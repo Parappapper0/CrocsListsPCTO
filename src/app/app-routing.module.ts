@@ -5,11 +5,12 @@ import { ElementoComponent } from './components/elemento/elemento.component';
 import { ListCardComponent } from './components/list-card/list-card.component';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
 import { ListSelectionPageComponent } from './components/list-selection-page/list-selection-page.component';
+import { ListViewPageComponent } from './components/list-view-page/list-view-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home',pathMatch: 'full'},
   { path: 'home', component: ListSelectionPageComponent},
-  { path: 'name-list', component: ElementoComponent},
+  { path: 'view-list', component: ListViewPageComponent},
   { path: 'setting', component: SettingsPageComponent},
 ];
 

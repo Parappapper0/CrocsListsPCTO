@@ -5,7 +5,7 @@
             <button class="sbutton" mat-mini-fab color="warn" (click)="onShare()"><mat-icon>share</mat-icon></button>
             <button class="sbutton" mat-mini-fab color="warn" (click)="onDelete()"><mat-icon>close</mat-icon></button>
         </mat-card-title>
-        <mat-card-content class="sottorettangolo">
+        <mat-card-content class="sottorettangolo" routerLink="/view-list" (click)="listManager.openList(index)">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aperiam explicabo eligendi quasi hic animi repellat dignissimos asperiores corporis sit, libero quia! Perferendis quasi ea vel facilis eius aliquid ipsam?
         </mat-card-content>
     </mat-card>
