@@ -12,9 +12,9 @@ export class ListManagerService {
     lists: Lista[] = [];
     open: number = -1;
 
-    openList(index : number) : void {
+    openList(index : string) : void {
 
-        this.open = index;
+        this.open = parseInt(index);
         //open the actual page now
     }
 
