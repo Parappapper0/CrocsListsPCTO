@@ -1,25 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { Elemento } from 'src/app/models/elemento';
+import { ListManagerService } from 'src/app/services/list-manager.service';
 
 @Component({
   selector: 'app-list-view-page',
   templateUrl: './list-view-page.component.html',
-  styleUrls: ['./list-view-page.component.scss']
+  styleUrls: ['./list-view-page.component.scss'],
+  providers: [ListManagerService]
 })
 export class ListViewPageComponent {
 
     @Input() titolo : string = "";
-    elements : Elemento[] = [];
+    id : number = 0;
 
-    onDelete(index : number) {
-
-        this.elements.splice(index, 1);
-        for(let i = index; i < this.elements.length; i++) 
-            this.elements[i].identifier--;
-    }
-
-    onAdd() {
-        this.elements.push(new Elemento("", this.elements.length));
-        console.log(this.elements);
-    }
+    constructor(protected listManager : ListManagerService) { }
 }

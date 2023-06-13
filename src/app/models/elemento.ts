@@ -1,10 +1,8 @@
 export class Elemento {
 
     public valore: string;
-    public identifier: number;
 
-    constructor(val: string, id : number) {
+    constructor(val: string) {
         this.valore = val;
-        this.identifier = id;
     }
 }
