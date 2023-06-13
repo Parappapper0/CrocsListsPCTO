@@ -42,7 +42,6 @@ import { ListManagerService } from './services/list-manager.service';
       FormsModule,
       ReactiveFormsModule
     ],
-    providers: [ListManagerService],
     bootstrap: [AppComponent]
   })
   export class AppModule { }

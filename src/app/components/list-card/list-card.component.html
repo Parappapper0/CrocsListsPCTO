@@ -1,11 +1,11 @@
 <div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xl-3">
     <mat-card class="componente-rettangolo">
         <mat-card-title>
-            <input class="cardTitle" [(ngModel)]="listManager.lists[index].titolo" />
+            <input class="cardTitle" [(ngModel)]="liste[index].titolo" />
             <button class="sbutton" mat-mini-fab color="warn" (click)="share()"><mat-icon>share</mat-icon></button>
-            <button class="sbutton" mat-mini-fab color="warn" (click)="listManager.removeList(index)"><mat-icon>close</mat-icon></button>
+            <button class="sbutton" mat-mini-fab color="warn" (click)="removeList()"><mat-icon>close</mat-icon></button>
         </mat-card-title>
-        <mat-card-content class="sottorettangolo" routerLink="/view-list" (click)="listManager.openList(index)">
+        <mat-card-content class="sottorettangolo" routerLink="/view-list" (click)="openList()">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aperiam explicabo eligendi quasi hic animi repellat dignissimos asperiores corporis sit, libero quia! Perferendis quasi ea vel facilis eius aliquid ipsam?
         </mat-card-content>
     </mat-card>

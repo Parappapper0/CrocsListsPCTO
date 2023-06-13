@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Lista } from 'src/app/models/lista';
 import { ListManagerService } from 'src/app/services/list-manager.service';
 
 @Component({
@@ -6,7 +7,17 @@ import { ListManagerService } from 'src/app/services/list-manager.service';
   templateUrl: './list-view-page.component.html',
   styleUrls: ['./list-view-page.component.scss']
 })
-export class ListViewPageComponent {
+export class ListViewPageComponent implements OnInit {
 
-    constructor(protected listManager : ListManagerService) { }
+    lista !: Lista;
+
+    constructor(private listManager : ListManagerService) { }
+    ngOnInit(): void {
+        
+        this.lista = this.listManager.getCurrentList();
+    }
+
+    addElement() {
+        this.listManager.addElement('');
+    }
 }
