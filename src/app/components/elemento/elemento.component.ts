@@ -1,20 +1,15 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { ListManagerService } from 'src/app/services/list-manager.service';
 
 @Component({
     selector: 'app-elemento',
     templateUrl: './elemento.component.html',
-    styleUrls: ['./elemento.component.scss']
+    styleUrls: ['./elemento.component.scss'],
+    providers: [ListManagerService]
 })
 export class ElementoComponent {
 
-    @Input() content : string = '';
-    @Input() index : string = "-1";
+    @Input() id : any = 0;
 
-    @Output() deleteEvent = new EventEmitter<number>();
-
-    onDelete() {
-
-        this.deleteEvent.emit(parseInt(this.index));
-    }
-    checked : boolean = false;
+    constructor(protected listManager : ListManagerService) { }
 }

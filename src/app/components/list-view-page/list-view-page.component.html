@@ -1,7 +1,7 @@
 <div>
 
-    <div *ngFor="let element of listManager.lists[id].elementi; index as i">
-        <app-elemento content="{{element.valore}}" index="{{i}}" (deleteEvent)="listManager.removeElement(i)"></app-elemento>
+    <div *ngFor="let elemento of listManager.getCurrentList().elementi; index as i">
+        <app-elemento id="{{i}}" (deleteEvent)="listManager.removeElement(i)"></app-elemento>
     </div>
 
     <div>

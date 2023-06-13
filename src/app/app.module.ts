@@ -17,6 +17,7 @@ import { SettingsPageComponent } from './components/settings-page/settings-page.
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { LogInRegisterComponent } from './components/log-in-register/log-in-register.component';
+import { ListManagerService } from './services/list-manager.service';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { LogInRegisterComponent } from './components/log-in-register/log-in-regi
       FormsModule,
       ReactiveFormsModule
     ],
-    providers: [],
+    providers: [ListManagerService],
     bootstrap: [AppComponent]
   })
   export class AppModule { }

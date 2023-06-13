@@ -1,7 +1,7 @@
 <div class="row">
 
     <div *ngFor="let list of listManager.lists; index as i">
-        <app-list-card titolo="{{list.titolo}}" index="{{i}}" (deleteListEvent)="listManager.removeList(i)"></app-list-card>
+        <app-list-card index="{{i}}" (deleteListEvent)="listManager.removeList(i)"></app-list-card>
     </div>
 
     <div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xl-3">
