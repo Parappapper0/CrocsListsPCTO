@@ -18,7 +18,6 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { LogInRegisterComponent } from './components/log-in-register/log-in-register.component';
 import { ListManagerService } from './services/list-manager.service';
-import { ProvaComponent } from './prova/prova.component';
 
 
 @NgModule({
@@ -33,8 +32,7 @@ import { ProvaComponent } from './prova/prova.component';
       SettingsPageComponent,
       SignInComponent,
       LoginPageComponent,
-      LogInRegisterComponent,
-      ProvaComponent
+      LogInRegisterComponent
     ],
     imports: [
       BrowserModule,

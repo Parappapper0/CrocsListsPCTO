@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./settings-page.component.scss']
 })
 export class SettingsPageComponent {
+  fontSize: number=0;
+  applyFontSize() {
 
+    let labels = document.getElementsByTagName("label");
+    for (let i = 0; i < labels.length; i++) {
+      labels[i].style.fontSize = this.fontSize + "px";
+    }
+  }
 }
