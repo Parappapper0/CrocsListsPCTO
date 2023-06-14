@@ -1,18 +1,43 @@
 .componente-rettangolo {
-  background-color: #ccc;
-  margin: 20px;
+    background-color: #ccc;
+    margin: 20px;
 }
+
 h2 {
 
-  margin-bottom: 5px;
-  margin-top: 5px;
-  padding-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 20px;
 }
 
 .sottorettangolo {
 
-  background-color: #ddd;
-  text-overflow: ellipsis;
+    background-color: #ddd;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    //else
+    height: 80px;
+
+    @media (min-width: 576px) {
+
+        height: 100px;
+    }
+
+    @media (min-width: 768px) {
+
+        height: 120px;
+    }
+
+    @media (min-width: 992px) {
+
+        height: 140px;
+    }
+
+    @media (min-width: 1200px) {
+
+        height: 200px;
+    }
 }
 
 .cardTitle {
@@ -37,4 +62,5 @@ h2 {
     margin-right: 1.5%;
 }
 
-//BASTA CSS FALLO TE
+//BASTA CSS FALLO TE (Non l'ha fatto lui, ma io)
+//                                          -Leonardo

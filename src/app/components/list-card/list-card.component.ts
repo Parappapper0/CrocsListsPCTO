@@ -32,4 +32,8 @@ export class ListCardComponent {
 
         this.listManager.openList(this.index);
     }
+
+    getToString() {
+        return this.listManager.elementiToString(this.index);
+    }
 }

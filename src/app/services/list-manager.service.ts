@@ -37,12 +37,12 @@ export class ListManagerService {
         this.lists[this.open].elementi.splice(index, 1);
     }
 
-    elementiToString(): string {
+    elementiToString(index : number): string {
         let s: string = "";
-        this.lists[this.open].elementi.forEach(element => {
-            s += (element.valore + ', ');
+        this.lists[index].elementi.forEach(element => {
+            s += ("・" + element.valore + "\n");
         });
-        s = s.slice(0, -2);
+        s = s.slice(0, -1);
         return s;
     }
 
