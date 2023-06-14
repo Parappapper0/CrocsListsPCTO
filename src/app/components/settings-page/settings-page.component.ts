@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 export class SettingsPageComponent {
   fontSize: number=15;
   fontSizediff: number=0;
-  fontsizetit: number=64;
+  fontsizetit: number=60;
   applyFontSize() {
     let labels = document.getElementsByTagName("label");
     let h1s = document.getElementsByTagName("h1");
@@ -19,6 +19,9 @@ export class SettingsPageComponent {
           let diff=this.fontSize-15;
           h1s[i].style.fontSize = this.fontsizetit+ diff + "px";
         }
+    }
+    for (let i = 0; i < labels.length; i++) {
+      labels[i].style.fontSize = this.fontSize + "px";
     }
   }
 }
