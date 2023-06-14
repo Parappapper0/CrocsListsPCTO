@@ -7,10 +7,18 @@ import { Component, Input } from '@angular/core';
 })
 export class SettingsPageComponent {
   fontSize: number=15;
+  fontSizediff: number=0;
+  fontsizetit: number=64;
   applyFontSize() {
     let labels = document.getElementsByTagName("label");
-    for (let i = 0; i < labels.length; i++) {
-      labels[i].style.fontSize = this.fontSize + "px";
+    let h1s = document.getElementsByTagName("h1");
+    for (let i = 0; i < h1s.length; i++) {
+      if (this.fontSize==15){
+        h1s[i].style.fontSize = this.fontsizetit + "px";}
+        else{
+          let diff=this.fontSize-15;
+          h1s[i].style.fontSize = this.fontsizetit+ diff + "px";
+        }
     }
   }
 }
