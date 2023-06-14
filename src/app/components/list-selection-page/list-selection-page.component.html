@@ -3,7 +3,7 @@
         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" *ngFor="let list of liste; index as i">
             <app-list-card index="{{i}}" (deleteListEvent)="deleteList(i)"></app-list-card>
         </div>
-        <div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
             <mat-card class="aggiunta-lista">
                 <mat-card-title>
                     <span class="cardTitle"> Nuova Lista </span>

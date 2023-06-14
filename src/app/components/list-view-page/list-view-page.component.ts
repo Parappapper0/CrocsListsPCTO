@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Lista } from 'src/app/models/lista';
 import { ListManagerService } from 'src/app/services/list-manager.service';
 
@@ -10,11 +11,16 @@ import { ListManagerService } from 'src/app/services/list-manager.service';
 export class ListViewPageComponent implements OnInit {
 
     lista !: Lista;
+    shouldLoad: boolean = true;
 
-    constructor(private listManager : ListManagerService) { }
+    constructor(private listManager : ListManagerService, private router: Router, private route: ActivatedRoute) { }
     ngOnInit(): void {
         
         this.lista = this.listManager.getCurrentList();
+        if(!this.lista) {
+            this.router.navigate([`../home`], {relativeTo: this.route});
+            this.shouldLoad = false;
+        }
     }
 
     addElement() {

@@ -1,11 +1,17 @@
-<div>
-
-    <div *ngFor="let elemento of lista.elementi; index as i">
-        <app-elemento id="{{i}}"></app-elemento>
+<div class="container-fluid" *ngIf="shouldLoad">
+    <div class="row justify-content-around">
+        <div class="col-12 titolo">
+            {{lista.titolo}}
+        </div>
     </div>
+    <hr>
+    <div class="row">
+        <div *ngFor="let elemento of lista.elementi; index as i" class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <app-elemento id="{{i}}"></app-elemento>
+        </div>
 
-    <div>
-        <button mat-fab color="accent" (click)="addElement()"> <mat-icon>add</mat-icon> </button>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 cntr">
+            <button id="addelem" mat-fab color="accent" (click)="addElement()"> <mat-icon>add</mat-icon></button>
+        </div>
     </div>
-
 </div>

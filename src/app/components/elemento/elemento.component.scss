@@ -1,19 +1,28 @@
-div {
+#elem {
 
     display: flex;
     border: 2px solid black;
     border-radius: 25px;
-    width: fit-content;
+    width: 100%;
     padding: 2px;
     align-items: center;
     margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
 
     width: min-content;
     height: min-content;
-    margin: 4px;
+    margin: 6px;
+    margin-left: auto;
+}
+
+#elemin {
+
+    margin-right: 7px;
+    width: 100%;
 }
 
 .checked {

@@ -1,26 +1,75 @@
 //color:#32BF8C;
 .Header {
-  width: 100%;
-  height: 82.5px;
-  background: #bbbbbb;
+    width: 100%;
+    height: 64.5px;
+    background: #bbbbbb;
+
+    @media (min-width: 768px) {
+
+        height: 84.5px;
+    }
 }
+
 #titleImg {
-  width: 487.5px;
-  height: auto;
-  right: auto;
-  top: auto;
+    width: 357.5px;
+    height: auto;
+    right: auto;
+    top: auto;
+
+    @media (min-width: 768px) {
+
+        width: 487.5px;
+    }
 }
-#logoImg{
-  position: absolute;
-  width: 90px;
-  height: auto;
-  left: 92%;
-  top: 0.08%;
+
+#logoImg {
+
+    //else
+    display: none;
+    position: absolute;
+    width: 70px;
+    height: auto;
+    right: 1%;
+    top: 0.08%;
+
+    @media (min-width: 576px) {
+        
+        display: block;
+    }
+
+    @media (min-width: 768px) {
+
+        width: 90px;
+    }
 }
-#settingsImg{
-  position: absolute;
-  width: 90px;
-  height: auto;
-  left: 82%;
-  top: 0.08%;
+
+#settingsImg {
+    
+    //else
+    position: absolute;
+    height: auto;
+    top: 0.08%;
+    width: 70px;
+    right: 1%;
+
+    @media (min-width: 576px) {
+
+        right: 14%;
+    }
+
+    @media (min-width: 768px) {
+
+        width: 90px;
+        right: 14%;
+    }
+
+    @media (min-width: 992px) {
+
+        right: 12%;
+    }
+
+    @media (min-width: 1200px) {
+    
+        right: 10%;
+    }
 }
