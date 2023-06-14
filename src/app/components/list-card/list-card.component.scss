@@ -13,6 +13,7 @@ h2 {
 .sottorettangolo {
 
   background-color: #ddd;
+  text-overflow: ellipsis;
 }
 
 .cardTitle {
@@ -28,16 +29,11 @@ h2 {
     font-weight: bold;
 }
 
-button {
-
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-    
-}
-
-.sbutton {
+#sbutton {
     width: 9%;
     aspect-ratio: 1;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
 }
 
 //BASTA CSS FALLO TE
