@@ -4,11 +4,11 @@
             <app-list-card index="{{i}}" (deleteListEvent)="deleteList(i)"></app-list-card>
         </div>
         <div class="col-xs-8 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <mat-card class="componente-rettangolo">
+            <mat-card class="aggiunta-lista">
                 <mat-card-title>
                     <span class="cardTitle"> Nuova Lista </span>
                 </mat-card-title>
-                <mat-card-content class="sottorettangolo">
+                <mat-card-content id="contenitore-pulsante-aggiunta">
                     <button mat-fab color="accent" (click)="createList()"><mat-icon>add</mat-icon></button>
                 </mat-card-content>
             </mat-card>

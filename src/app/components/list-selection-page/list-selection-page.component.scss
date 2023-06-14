@@ -11,13 +11,18 @@
     font-weight: bold;
 }
 
-.componente-rettangolo {
+.aggiunta-lista {
 
     background-color: #ccc;
     margin: 20px;
 }
 
-.sottorettangolo {
+#contenitore-pulsante-aggiunta {
 
     background-color: #ddd;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
 }

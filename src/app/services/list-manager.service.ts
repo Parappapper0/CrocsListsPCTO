@@ -12,17 +12,14 @@ export class ListManagerService {
     lists: Lista[] = [];
     open: number = -1;
 
-    openList(index : string) : void {
+    openList(index: string): void {
 
         this.open = parseInt(index);
-        //open the actual page now
     }
 
     addList(titolo: string): void {
 
         this.lists.push(new Lista(titolo));
-        console.log(this.getCurrentList());
-        console.log(this.open);
     }
 
     removeList(index: number): void {
@@ -32,11 +29,7 @@ export class ListManagerService {
 
     addElement(content: string): void {
 
-        console.log(this.lists);
-        console.log(this.getCurrentList());
-        console.log(this.open);
         this.lists[this.open].elementi.push(new Elemento(content));
-        
     }
 
     removeElement(index: number) {
