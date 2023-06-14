@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-settings-page',
@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./settings-page.component.scss']
 })
 export class SettingsPageComponent {
-  fontSize: number=0;
+  fontSize: number=15;
   applyFontSize() {
-
     let labels = document.getElementsByTagName("label");
     for (let i = 0; i < labels.length; i++) {
       labels[i].style.fontSize = this.fontSize + "px";
