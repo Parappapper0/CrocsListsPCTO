@@ -53,11 +53,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-settings-page',
   templateUrl: './settings-page.component.html',
-  styleUrls: ['./settings-page.component.scss']
+  styleUrls: ['./settings-page.component.scss'],
 })
 export class SettingsPageComponent {
-  fontSize: number = 15;
-  fontsizetit: number = 60;
+  fontSize: number = 16;
+  fontsizetit: number = 40;
   @Output() fontSizec = new EventEmitter<number>();
 
   applyFontSize() {
@@ -65,11 +65,14 @@ export class SettingsPageComponent {
     let h1s = document.getElementsByTagName('h1');
 
     for (let i = 0; i < h1s.length; i++) {
-      if (this.fontSize == 15) {
+      if (this.fontSize == 16) {
         h1s[i].style.fontSize = this.fontsizetit + 'px';
-      } else {
-        let diff = this.fontSize - 15;
+      } else if (this.fontSize > 16) {
+        let diff = this.fontSize - 16;
         h1s[i].style.fontSize = this.fontsizetit + diff + 'px';
+      } else if (this.fontSize < 16) {
+        let diff = 16 - this.fontSize;
+        h1s[i].style.fontSize = this.fontsizetit - diff + 'px';
       }
       this.fontSizec.emit(this.fontSize);
     }
@@ -78,5 +81,4 @@ export class SettingsPageComponent {
       labels[i].style.fontSize = this.fontSize + 'px';
     }
   }
-
 }
