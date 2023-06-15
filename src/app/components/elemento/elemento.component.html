@@ -1,6 +1,6 @@
 <div *ngIf="lista" id="elem">
-    <mat-checkbox (change)="lista.elementi[id].checked = !lista.elementi[id].checked"></mat-checkbox>
+    <mat-checkbox (change)="lista.elementi[id].checked = !lista.elementi[id].checked" [checked]="lista.elementi[id].checked" color="warn"></mat-checkbox>
     <input [ngClass]="{'checked' : lista.elementi[id].checked}" id="elemin" matInput placeholder="Insert element name"
         [(ngModel)]="lista.elementi[id].valore" />
-    <button mat-mini-fab color="warn" (click)="deleteElement()"><mat-icon>close</mat-icon></button>
+    <button mat-icon-button color="warn" (click)="deleteElement()"><mat-icon>close</mat-icon></button>
 </div>
