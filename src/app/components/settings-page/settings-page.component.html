@@ -13,21 +13,28 @@
       <h1>⎯Generali⎯⎯⎯⎯⎯</h1>
       <ul>
         <li>
-          <label for="comando-vocale">Comando Vocale</label>
-          <div class="checkbox-container">
-            <input type="checkbox" id="comando-vocale" />
-            <label class="checkbox-label" for="comando-vocale">Attiva</label>
+          <div class="input-container">
+            <label for="comando-vocale">Comando Vocale</label>
+            <div class="checkbox-container1">
+              <input type="checkbox" id="comando-vocale" />
+              <label class="checkbox-label" for="comando-vocale">Attiva</label>
+            </div>
           </div>
         </li>
-        <li>
-          <label for="parola-ordine">Parola d'Ordine</label>
-          <input type="text" id="parola-ordine" value="Lista" style="width: 10%" />
+
+        <li class="optional-option" >
+          <div class="input-container">
+            <label for="parola-ordine">Parola d'Ordine</label>
+            <input type="text" id="parola-ordine" value="Lista" style="width: 10%" />
+          </div>
         </li>
-        <li>
-          <label for="richiesta-conferma">Richiesta di Conferma</label>
-          <div class="checkbox-container">
-            <input type="checkbox" id="richiesta-conferma" />
-            <label class="checkbox-label" for="richiesta-conferma">Attiva</label>
+        <li class="optional-option" >
+          <div class="input-container">
+            <label for="richiesta-conferma">Richiesta di Conferma</label>
+            <div class="checkbox-container2">
+              <input type="checkbox" id="richiesta-conferma" />
+              <label class="checkbox-label" for="richiesta-conferma">Attiva</label>
+            </div>
           </div>
         </li>
       </ul>
@@ -35,22 +42,28 @@
         <h1>⎯Accessibilità⎯⎯⎯</h1>
         <ul>
           <li>
-            <label for="alto-contrasto">Alto Contrasto</label>
-            <div class="checkbox-container">
-              <input type="checkbox" id="alto-contrasto" />
-              <label class="checkbox-label" for="alto-contrasto">Attiva</label>
+            <div class="input-container">
+              <label for="alto-contrasto">Alto Contrasto</label>
+              <div class="checkbox-container3 ">
+                <input type="checkbox" id="alto-contrasto" />
+                <label class="checkbox-label" for="alto-contrasto">Attiva</label>
+              </div>
             </div>
           </li>
           <li>
-            <label for="dimensione-carattere">Dimensione Carattere</label>
-            <input type="text" id="dimensione-carattere"  [(ngModel)]="fontSize" style="width: 50%" />
-            <button (click)="applyFontSize()">Conferma</button>
+            <div class="input-container">
+              <label for="dimensione-carattere">Dimensione Carattere</label>
+              <input type="text" id="dimensione-carattere" [(ngModel)]="fontSize" style="width: 50px; text-align: center">
+              <button (click)="applyFontSize()">Conferma</button>
+            </div>
           </li>
           <li>
-            <label for="leggialta-voce">Leggi ad Alta Voce</label>
-            <div class="checkbox-container">
-              <input type="checkbox" id="leggialta-voce" />
-              <label class="checkbox-label" for="leggialta-voce">Attiva</label>
+            <div class="input-container">
+              <label for="leggialta-voce">Leggi ad Alta Voce</label>
+              <div class="checkbox-container4">
+                <input type="checkbox" id="leggialta-voce" />
+                <label class="checkbox-label" for="leggialta-voce">Attiva</label>
+              </div>
             </div>
           </li>
         </ul>
@@ -60,12 +73,16 @@
       <h1>⎯Account⎯⎯⎯⎯⎯</h1>
       <ul>
         <li>
-          <label for="account">Account</label>
           <div class="button-container">
-            <a routerLink="/login-page">
-              <button class="button">Accedi</button></a>
-            <a routerLink="/sign-in">
-              <button class="button">Registrati</button></a>
+            <label for="account">Account</label>
+            <div>
+              <a routerLink="/login-page">
+                <button class="button">Accedi</button>
+              </a>
+              <a routerLink="/sign-in">
+                <button class="button">Registrati</button>
+              </a>
+            </div>
           </div>
         </li>
       </ul>
