@@ -14,7 +14,6 @@ body {
 }
 
 h1 {
-  font-size: 64px;
   margin-top: 0;
 }
 
@@ -27,26 +26,49 @@ li {
   margin-bottom: 10px;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  font-size: 15px;
+.label-container {
+  display: flex;
+  align-items: center;
+}
+
+.label-container label {
+  margin-right: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
 }
 
 input[type="text"],
 select {
   width: 100%;
   padding: 5px;
+  margin-left: auto;
 }
 
-.checkbox-container {
+.checkbox-container1 {
   display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.checkbox-container2 {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.checkbox-container3 {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.checkbox-container4 {
+  display: flex;
+  margin-left: auto;
   align-items: center;
 }
 
 .checkbox-label {
-  display: flex;
-  align-items: right;
   margin-right: 10px;
 }
 
@@ -99,3 +121,4 @@ select {
   color: #333;
   font-weight: bold;
 }
+
