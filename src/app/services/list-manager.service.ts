@@ -38,11 +38,14 @@ export class ListManagerService {
     }
 
     elementiToString(index : number): string {
+
         let s: string = "";
+
         this.lists[index].elementi.forEach(element => {
-            s += ("・" + element.valore + "\n");
+            if(element.valore != "" && !element.checked)
+                s += ("・" + element.valore);
         });
-        s = s.slice(0, -1);
+
         return s;
     }
 

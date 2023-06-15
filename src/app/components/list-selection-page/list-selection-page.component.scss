@@ -6,23 +6,46 @@
     margin-right: 1.5%;
     margin-bottom: 1%;
     margin-top: 1%;
-    width: 70%;
     font-size: larger;
     font-weight: bold;
 }
 
+mat-card-title {
+
+    height: 50px;
+    background-color: #139b5c;
+    border: 1px solid darkgreen;
+    border-radius: 15px 15px 0px 0px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .aggiunta-lista {
 
-    background-color: #ccc;
+    border-radius: 15px 15px 15px 15px;
     margin: 20px;
 }
 
 #contenitore-pulsante-aggiunta {
 
-    background-color: #ddd;
+    border: 1px solid darkgreen;
+    border-radius: 0px 0px 15px 15px;
+    background-color: white;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5%;
+}
+
+button {
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 1.5;
 }

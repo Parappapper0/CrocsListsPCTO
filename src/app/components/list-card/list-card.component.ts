@@ -34,6 +34,7 @@ export class ListCardComponent {
     }
 
     getToString() {
-        return this.listManager.elementiToString(this.index);
+        let str = this.listManager.elementiToString(this.index);
+        return str == "" ? "Lista vuota, clicka per aprirla e aggiungere qualcosa" : str;
     }
 }
