@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-settings-page',
@@ -9,6 +9,7 @@ export class SettingsPageComponent {
   fontSize: number=15;
   fontSizediff: number=0;
   fontsizetit: number=60;
+  @Output() fontSizec = new EventEmitter<number>();
   applyFontSize() {
     let labels = document.getElementsByTagName("label");
     let h1s = document.getElementsByTagName("h1");
@@ -19,6 +20,7 @@ export class SettingsPageComponent {
           let diff=this.fontSize-15;
           h1s[i].style.fontSize = this.fontsizetit+ diff + "px";
         }
+        this.fontSizec.emit(this.fontSize);
     }
     for (let i = 0; i < labels.length; i++) {
       labels[i].style.fontSize = this.fontSize + "px";
