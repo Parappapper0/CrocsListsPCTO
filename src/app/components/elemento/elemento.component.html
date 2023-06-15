@@ -1,6 +1,17 @@
 <div *ngIf="lista" id="elem">
-    <mat-checkbox (change)="lista.elementi[id].checked = !lista.elementi[id].checked" [checked]="lista.elementi[id].checked" color="warn"></mat-checkbox>
-    <input [ngClass]="{'checked' : lista.elementi[id].checked}" id="elemin" matInput placeholder="Insert element name"
-        [(ngModel)]="lista.elementi[id].valore" />
-    <button mat-icon-button color="warn" (click)="deleteElement()"><mat-icon>close</mat-icon></button>
+    <div id="the-rot-consumes">
+        <mat-checkbox (change)="lista.elementi[id].checked = !lista.elementi[id].checked; reorder()"
+            [checked]="lista.elementi[id].checked" color="warn"></mat-checkbox>
+    </div>
+    <div id="gourmand">
+        <input [ngClass]="{'checked' : lista.elementi[id].checked}" id="elemin" matInput
+            placeholder="Inserisci il nome dell'elemento" [(ngModel)]="lista.elementi[id].valore" />
+
+        <button mat-icon-button color="warn" id="worm-grass"
+            (click)="deleteElement()"><mat-icon>close</mat-icon></button>
+    </div>
+    <div id="snail-pop">
+        <input id="scavenger-funny-moment" [ngClass]="{'checked' : lista.elementi[id].checked}" matInput
+            placeholder="Inserisci una descrizione per l'elemento" [(ngModel)]="lista.elementi[id].descri">
+    </div>
 </div>

@@ -15,12 +15,11 @@ input {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: auto;
     border-radius: 25px;
     font-size: xx-large;
     align-items: center;
     justify-content: center;
-    height: 48px;
+    height: 96px;
 }
 
 .cntr {
@@ -34,4 +33,16 @@ input {
     text-align: center;
     font-size: xx-large;
     font-weight: bolder;
+}
+
+.checkbox {
+
+    position: fixed;
+    right: 2%;
+    bottom: 1%;
+    z-index: 10000;
+    background-color: white;
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+    padding-left: 8px;
 }

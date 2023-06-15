@@ -1,7 +1,7 @@
 <div class="container-fluid" *ngIf="shouldLoad">
     <div class="row justify-content-around">
         <div class="col-12 titolo">
-            {{lista.titolo}}
+            <span>{{lista.titolo}}</span>
         </div>
     </div>
     <hr>
@@ -14,4 +14,5 @@
             <button id="addelem" mat-fab color="accent" (click)="addElement()"> <mat-icon>add</mat-icon></button>
         </div>
     </div>
+    <mat-checkbox class="checkbox" (change)="lista.shouldReorder = !lista.shouldReorder; reorder()" [checked]="lista.shouldReorder" labelPosition="before">Elementi segnati in fondo: </mat-checkbox>
 </div>

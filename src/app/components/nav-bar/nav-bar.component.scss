@@ -9,6 +9,9 @@
         height: 84.5px;
     }
     border: 2px solid green;
+
+    display: flex;
+    align-items: center;
 }
 
 #titleImg {
@@ -28,10 +31,9 @@
     //else
     display: none;
     position: absolute;
-    width: 70px;
+    width: 60px;
     height: auto;
     right: 1%;
-    top: 0.08%;
 
     @media (min-width: 576px) {
         
@@ -40,7 +42,7 @@
 
     @media (min-width: 768px) {
 
-        width: 90px;
+        width: 80px;
     }
 }
 
@@ -49,8 +51,7 @@
     //else
     position: absolute;
     height: auto;
-    top: 0.08%;
-    width: 70px;
+    width: 60px;
     right: 1%;
 
     @media (min-width: 576px) {
@@ -60,7 +61,7 @@
 
     @media (min-width: 768px) {
 
-        width: 90px;
+        width: 80px;
         right: 14%;
     }
 

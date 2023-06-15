@@ -21,4 +21,9 @@ export class ElementoComponent implements OnInit {
     deleteElement() {
         this.listManager.removeElement(this.id);
     }
+
+    reorder() {
+        if(this.lista.shouldReorder)
+            this.listManager.reorder();
+    }
 }

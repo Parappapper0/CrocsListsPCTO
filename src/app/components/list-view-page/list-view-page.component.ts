@@ -26,4 +26,8 @@ export class ListViewPageComponent implements OnInit {
     addElement() {
         this.listManager.addElement('');
     }
+
+    reorder() {
+        this.listManager.reorder();
+    }
 }

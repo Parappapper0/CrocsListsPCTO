@@ -1,12 +1,9 @@
 #elem {
 
-    display: flex;
     border: 2px solid black;
     border-radius: 25px;
     width: 100%;
     padding: 2px;
-    align-items: center;
-    justify-content: center;
     margin: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -24,9 +21,62 @@ button {
 }
 
 #elemin {
-
-    margin-right: 7px;
+    margin-right: 6px;
     width: 100%;
+}
+
+#gourmand {
+    display: flex;
+    border-radius: 25px;
+    width: 83%;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 3%;
+    background-color: #99DFC6;
+}
+
+#snail-pop {
+    display: flex;
+    border-radius: 25px;
+    width: 80%;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 6%;
+    background-color: #99DFC6;
+}
+
+#scavenger-funny-moment {
+
+    width: 100%;
+    margin-bottom: 1%;
+    margin-top: auto;
+    color: #777;
+}
+
+#worm-grass {
+    
+    margin-right: 2%;
+    
+}
+
+#the-rot-consumes {
+
+    margin-bottom: auto;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+mat-checkbox {
+    position: relative;
+    bottom: -25px;
+    scale: 1.6;
+
 }
 
 .checked {

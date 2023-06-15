@@ -30,6 +30,8 @@ export class ListManagerService {
     addElement(content: string): void {
 
         this.lists[this.open].elementi.push(new Elemento(content));
+        if(this.lists[this.open].shouldReorder)
+            this.reorder();
     }
 
     removeElement(index: number) {
@@ -51,5 +53,9 @@ export class ListManagerService {
 
     getCurrentList(): Lista {
         return this.lists[this.open];
+    }
+
+    reorder() {
+        this.lists[this.open].elementi.sort((a: Elemento, b : Elemento) => Number(a.checked) - Number(b.checked));
     }
 }
