@@ -1,2 +1,2 @@
 # Da chiedere
-Problema con text-overflow: ellipsis
+NULLAH
