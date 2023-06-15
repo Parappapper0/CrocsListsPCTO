@@ -43,7 +43,7 @@ export class ListManagerService {
 
         this.lists[index].elementi.forEach(element => {
             if(element.valore != "" && !element.checked)
-                s += ("・" + element.valore);
+                s += ("・" + element.valore + "<br />");
         });
 
         return s;

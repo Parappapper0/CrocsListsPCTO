@@ -4,5 +4,5 @@
         <button id="sbutton" mat-icon-button (click)="share()"><mat-icon>share</mat-icon></button>
         <button id="sbutton" mat-icon-button (click)="removeList()"><mat-icon>close</mat-icon></button>
     </mat-card-title>
-    <mat-card-content class="sottorettangolo" routerLink="/view-list" (click)="openList()">{{getToString()}}</mat-card-content>
+    <mat-card-content class="sottorettangolo" routerLink="/view-list" (click)="openList()" [innerHTML]="getToString()"></mat-card-content>
 </mat-card>
