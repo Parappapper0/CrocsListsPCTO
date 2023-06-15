@@ -53,8 +53,9 @@
           <li>
             <div class="input-container">
               <label for="dimensione-carattere">Dimensione Carattere</label>
-              <input type="text" id="dimensione-carattere" [(ngModel)]="fontSize" style="width: 50px; text-align: center">
+              <input type="number" id="dimensione-carattere" [(ngModel)]="fontSizeInput" style="width: 50px; text-align: center">
               <button (click)="applyFontSize()">Conferma</button>
+
             </div>
           </li>
           <li>

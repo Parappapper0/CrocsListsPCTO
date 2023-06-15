@@ -1,84 +1,43 @@
-/*import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
-
-@Component({
-  selector: 'app-settings-page',
-  templateUrl: './settings-page.component.html',
-  styleUrls: ['./settings-page.component.scss']
-})
-export class SettingsPageComponent {
-  fontSize: number=15;
-  fontSizediff: number=0;
-  fontsizetit: number=60;
-  isVoiceCommandActivated: boolean = false;
-  @Output() fontSizec = new EventEmitter<number>();
-  applyFontSize() {
-    let labels = document.getElementsByTagName("label");
-    let h1s = document.getElementsByTagName("h1");
-    for (let i = 0; i < h1s.length; i++) {
-      if (this.fontSize==15){
-        h1s[i].style.fontSize = this.fontsizetit + "px";}
-        else{
-          let diff=this.fontSize-15;
-          h1s[i].style.fontSize = this.fontsizetit+ diff + "px";
-        }
-        this.fontSizec.emit(this.fontSize);
-    }
-    for (let i = 0; i < labels.length; i++) {
-      labels[i].style.fontSize = this.fontSize + "px";
-    }
-
-  }
-  toggleVoiceCommand() {
-    // Aggiorna la visualizzazione delle impostazioni aggiuntive
-    // in base allo stato di isVoiceCommandActivated
-    if (this.isVoiceCommandActivated) {
-      // Mostra le impostazioni aggiuntive
-      document.querySelectorAll('.optional-option').forEach((element) => {
-        element.classList.remove('hidden');
-      });
-    } else {
-      // Nascondi le impostazioni aggiuntive
-      document.querySelectorAll('.optional-option').forEach((element) => {
-        element.classList.add('hidden');
-      });
-    }
-
-}
-}
-*/
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SettingManagerService } from 'src/app/services/setting-manager.service';
 
 @Component({
   selector: 'app-settings-page',
   templateUrl: './settings-page.component.html',
   styleUrls: ['./settings-page.component.scss'],
 })
-export class SettingsPageComponent {
-  fontSize: number = 16;
-  fontsizetit: number = 40;
-  @Output() fontSizec = new EventEmitter<number>();
+export class SettingsPageComponent implements OnInit {
+  fontSizeInput!: number;
 
-  applyFontSize() {
-    let labels = document.getElementsByTagName('label');
-    let h1s = document.getElementsByTagName('h1');
+  constructor(private serviceFontSize: SettingManagerService) {}
 
-    for (let i = 0; i < h1s.length; i++) {
-      if (this.fontSize == 16) {
-        h1s[i].style.fontSize = this.fontsizetit + 'px';
-      } else if (this.fontSize > 16) {
-        let diff = this.fontSize - 16;
-        h1s[i].style.fontSize = this.fontsizetit + diff + 'px';
-      } else if (this.fontSize < 16) {
-        let diff = 16 - this.fontSize;
-        h1s[i].style.fontSize = this.fontsizetit - diff + 'px';
-      }
-      this.fontSizec.emit(this.fontSize);
-    }
+  ngOnInit(): void {
+    this.fontSizeInput = this.serviceFontSize.getFontSizeText();
+  }
+
+  applyFontSize(): void {
+    this.serviceFontSize.setFontSizeText(this.fontSizeInput);
+    this.updateFontSizes();
+  }
+
+  updateFontSizes(): void {
+    const h1s = document.getElementsByTagName('h1');
+    const labels = document.getElementsByTagName('label');
 
     for (let i = 0; i < labels.length; i++) {
-      labels[i].style.fontSize = this.fontSize + 'px';
+      labels[i].style.fontSize = this.fontSizeInput + 'px';
+    }
+
+    for (let i = 0; i < h1s.length; i++) {
+      h1s[i].style.fontSize = this.serviceFontSize.applyFontSizes(this.fontSizeInput) + 'px';
     }
   }
 }
+
+
+
+
+/*
+this.fontSizec.emit(this.fontSize);
+@Output() fontSizec = new EventEmitter<number>();
+*/
