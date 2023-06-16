@@ -3,45 +3,41 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 import { SettingManagerService } from 'src/app/services/setting-manager.service';
 
 @Component({
-  selector: 'app-settings-page',
-  templateUrl: './settings-page.component.html',
-  styleUrls: ['./settings-page.component.scss'],
+    selector: 'app-settings-page',
+    templateUrl: './settings-page.component.html',
+    styleUrls: ['./settings-page.component.scss'],
 })
-export class SettingsPageComponent implements OnInit, DoCheck {
-  fontSizeInput!: number;
-  varTema: string = 'Default';
-  varLingua: string = 'Italiano';
+export class SettingsPageComponent implements OnInit {
 
-  comandoVocaleAttivo: boolean = false;
-  parolaOrdine: string = 'Lista';
-  richiestaConfermaAttiva: boolean = false;
+    fontSizes !: {fontSizeText: number, fontSizeTitle: number};
+    lingue !: string[];
+    temi !: string[];
 
-  constructor(private serviceFontSize: SettingManagerService) {}
+    indiceLinguaAttiva : number = 0;
+    indiceTemaAttivo   : number = 0;
 
-  ngOnInit(): void {
-    this.fontSizeInput = this.serviceFontSize.getFontSizeText();
-  }
+    comandoVocaleAttivo: boolean = false;
+    parolaOrdine: string = 'Lista';
+    richiestaConfermaAttiva: boolean = false;
 
-  applyFontSize(): void {
-    this.serviceFontSize.setFontSizeText(this.fontSizeInput);
-    this.updateFontSizes();
-  }
+    constructor(private settingsService: SettingManagerService) { }
 
-  ngDoCheck() {
-    this.applyFontSize();
-  }
-
-  updateFontSizes(): void {
-    const h1s = document.getElementsByTagName('h1');
-    const labels = document.getElementsByTagName('label');
-
-    for (let i = 0; i < labels.length; i++) {
-      labels[i].style.fontSize = this.fontSizeInput + 'px';
+    ngOnInit(): void {
+        
+        this.fontSizes = this.settingsService.fontSizes;
+        this.lingue = this.settingsService.lingue;
+        this.temi = this.settingsService.temi;
     }
 
-    for (let i = 0; i < h1s.length; i++) {
-      h1s[i].style.fontSize =
-        this.serviceFontSize.applyFontSizes(this.fontSizeInput) + 'px';
+    updateCarattere() {
+
+
+        if(this.fontSizes.fontSizeText > 32) this.fontSizes.fontSizeText = 32;
+        else if(this.fontSizes.fontSizeText < 8) this.fontSizes.fontSizeText = 8;
+
+        
+        console.log(this.fontSizes.fontSizeText);
+
+        this.fontSizes.fontSizeTitle = this.fontSizes.fontSizeText * 2.5;
     }
-  }
 }

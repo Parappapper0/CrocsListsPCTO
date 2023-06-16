@@ -20,6 +20,21 @@
     right: auto;
     top: auto;
 
+    @media (max-width: 258px) {
+
+        width: 180px;
+    }
+
+    @media (max-width: 316px) and (min-width: 259px) {
+
+        width: 230px;
+    }
+
+    @media (max-width: 376px) and (min-width: 317px) {
+
+        width: 280px;
+    }
+
     @media (min-width: 768px) {
 
         width: 487.5px;
@@ -49,10 +64,16 @@
 #settingsImg {
     
     //else
+    display: inline;
     position: absolute;
     height: auto;
     width: 60px;
     right: 1%;
+
+    @media (max-width: 450px) {
+
+        display: none;
+    }
 
     @media (min-width: 576px) {
 
