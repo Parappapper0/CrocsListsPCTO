@@ -18,6 +18,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { LogInRegisterComponent } from './components/log-in-register/log-in-register.component';
 import { ListManagerService } from './services/list-manager.service';
+import { LoadListDialogComponent } from './components/load-list-dialog/load-list-dialog.component';
+import { SendListCodeDialogComponent } from './components/send-list-code-dialog/send-list-code-dialog.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { ListManagerService } from './services/list-manager.service';
       SettingsPageComponent,
       SignInComponent,
       LoginPageComponent,
-      LogInRegisterComponent
+      LogInRegisterComponent,
+      LoadListDialogComponent,
+      SendListCodeDialogComponent
     ],
     imports: [
       BrowserModule,

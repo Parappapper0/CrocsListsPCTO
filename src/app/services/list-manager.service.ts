@@ -17,9 +17,9 @@ export class ListManagerService {
         this.open = parseInt(index);
     }
 
-    addList(titolo: string): void {
+    addList(titolo: string, shouldReorder : boolean = false, elementi : Elemento[] = []): void {
 
-        this.lists.push(new Lista(titolo));
+        this.lists.push(new Lista(titolo, shouldReorder, elementi));
     }
 
     removeList(index: number): void {

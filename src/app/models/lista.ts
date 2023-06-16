@@ -6,9 +6,9 @@ export class Lista {
     public elementi : Elemento[];
     public shouldReorder : boolean;
 
-    constructor(tit : string) {
+    constructor(tit : string, shouldReorder: boolean = false, elementi: Elemento[] = []) {
         this.titolo = tit;
-        this.elementi = [];
-        this.shouldReorder = false;
+        this.elementi = elementi;
+        this.shouldReorder = shouldReorder;
     }
 }

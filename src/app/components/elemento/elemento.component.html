@@ -1,7 +1,7 @@
 <div *ngIf="lista" id="elem">
     <div id="the-rot-consumes">
         <mat-checkbox (change)="lista.elementi[id].checked = !lista.elementi[id].checked; reorder()"
-            [checked]="lista.elementi[id].checked" color="warn"></mat-checkbox>
+            [checked]="lista.elementi[id].checked" color="primary"></mat-checkbox>
     </div>
     <div id="gourmand">
         <input [ngClass]="{'checked' : lista.elementi[id].checked}" id="elemin" matInput
