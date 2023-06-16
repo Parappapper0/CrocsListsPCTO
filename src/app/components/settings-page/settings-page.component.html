@@ -7,34 +7,40 @@
   <style id="custom-styles"></style>
 </head>
 
-<body>
+  <body [ngStyle]="{'font-size': fontSizeInput + 'px'}">
   <div class="container">
     <div class="column">
       <h1>⎯Generali⎯⎯⎯⎯⎯</h1>
       <ul>
         <li>
-          <div class="input-container">
-            <label for="comando-vocale">Comando Vocale</label>
-            <div class="checkbox-container1">
-              <input type="checkbox" id="comando-vocale" />
-              <label class="checkbox-label" for="comando-vocale">Attiva</label>
-            </div>
+          <div class="input-container1">
+            <label for="dimensione-carattere">Dimensione Carattere</label>
+
+            <mat-form-field class="inm">
+              <input matInput type="number" id="dimensione-carattere" [(ngModel)]="fontSizeInput" class="custom-input">
+            </mat-form-field>
+
+            <!--input type="number" id="dimensione-carattere" [(ngModel)]="fontSizeInput" style="width: 50px; text-align: center">
+            <button (click)="applyFontSize()">Conferma</button-->
           </div>
         </li>
 
-        <li class="optional-option" >
-          <div class="input-container">
-            <label for="parola-ordine">Parola d'Ordine</label>
-            <input type="text" id="parola-ordine" value="Lista" style="width: 10%" />
+        <li>
+          <div class="input-container1">
+            <label for="Tema">Tema</label>
+
+            <mat-form-field class="inm2">
+              <input matInput type="text" id="Tema" [(ngModel)]="varTema" class="custom-input2" style="width: auto">
+            </mat-form-field>
+
           </div>
         </li>
-        <li class="optional-option" >
-          <div class="input-container">
-            <label for="richiesta-conferma">Richiesta di Conferma</label>
-            <div class="checkbox-container2">
-              <input type="checkbox" id="richiesta-conferma" />
-              <label class="checkbox-label" for="richiesta-conferma">Attiva</label>
-            </div>
+        <li>
+          <div class="input-container1">
+            <label for="Lingua">Lingua</label>
+            <mat-form-field class="inm2">
+              <input matInput type="text" id="Lingua" [(ngModel)]="varLingua" class="custom-input2" style="width: auto">
+            </mat-form-field>
           </div>
         </li>
       </ul>
@@ -43,31 +49,28 @@
         <ul>
           <li>
             <div class="input-container">
-              <label for="alto-contrasto">Alto Contrasto</label>
-              <div class="checkbox-container3 ">
-                <input type="checkbox" id="alto-contrasto" />
-                <label class="checkbox-label" for="alto-contrasto">Attiva</label>
+              <label for="comando-vocale">Comando Vocale</label>
+              <div class="checkbox-container1">
+                <mat-slide-toggle id="comando-vocale" [(ngModel)]="comandoVocaleAttivo"></mat-slide-toggle>
               </div>
             </div>
           </li>
-          <li>
+          <li class="optional-option" *ngIf="comandoVocaleAttivo">
             <div class="input-container">
-              <label for="dimensione-carattere">Dimensione Carattere</label>
-              <input type="number" id="dimensione-carattere" [(ngModel)]="fontSizeInput" style="width: 50px; text-align: center">
-              <button (click)="applyFontSize()">Conferma</button>
-
+              <label for="parola-ordine">Parola d'Ordine</label>
+              <input type="text" id="parola-ordine" [(ngModel)]="parolaOrdine" style="width: 10%" />
             </div>
           </li>
-          <li>
+          <li class="optional-option" *ngIf="comandoVocaleAttivo">
             <div class="input-container">
-              <label for="leggialta-voce">Leggi ad Alta Voce</label>
-              <div class="checkbox-container4">
-                <input type="checkbox" id="leggialta-voce" />
-                <label class="checkbox-label" for="leggialta-voce">Attiva</label>
+              <label for="richiesta-conferma">Richiesta di Conferma</label>
+              <div class="checkbox-container2">
+                <mat-slide-toggle id="richiesta-conferma" [(ngModel)]="richiestaConfermaAttiva"></mat-slide-toggle>
               </div>
             </div>
           </li>
         </ul>
+
       </div>
     </div>
     <div class="column">
@@ -76,14 +79,16 @@
         <li>
           <div class="button-container">
             <label for="account">Account</label>
-            <div>
-              <a routerLink="/login-page">
-                <button class="button">Accedi</button>
-              </a>
-              <a routerLink="/sign-in">
-                <button class="button">Registrati</button>
-              </a>
-            </div>
+            <div class="example-button-row">
+            <a mat-fab extended routerLink="/login-page">
+              <mat-icon>login</mat-icon>
+              Accedi
+            </a>
+            <a mat-fab extended routerLink="/sign-in">
+              <mat-icon>home</mat-icon>
+              Registrati
+            </a>
+          </div>
           </div>
         </li>
       </ul>

@@ -1,13 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
+
 import { SettingManagerService } from 'src/app/services/setting-manager.service';
+
 
 @Component({
   selector: 'app-settings-page',
   templateUrl: './settings-page.component.html',
   styleUrls: ['./settings-page.component.scss'],
 })
-export class SettingsPageComponent implements OnInit {
+
+export class SettingsPageComponent implements OnInit, DoCheck {
   fontSizeInput!: number;
+  varTema: string='Default';
+  varLingua: string='Italiano';
+
+  comandoVocaleAttivo: boolean = false;
+  parolaOrdine: string = 'Lista';
+  richiestaConfermaAttiva: boolean = false;
 
   constructor(private serviceFontSize: SettingManagerService) {}
 
@@ -18,6 +27,10 @@ export class SettingsPageComponent implements OnInit {
   applyFontSize(): void {
     this.serviceFontSize.setFontSizeText(this.fontSizeInput);
     this.updateFontSizes();
+  }
+
+      ngDoCheck() {
+    this.applyFontSize();
   }
 
   updateFontSizes(): void {
