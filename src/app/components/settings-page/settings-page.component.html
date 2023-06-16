@@ -15,7 +15,7 @@
                 <div class="input-container1 row justify-content-between">
                     <label class="col-8" for="Tema">Tema</label>
                     <div class="col-4 end">
-                        <mat-select class="custom-input2" [(value)]="temaPredefinito">
+                        <mat-select class="custom-input2" [value]="temi[indiceTemaAttivo.index]">
                             <mat-option *ngFor="let tema of temi" [value]="tema">
                                 {{tema}}
                             </mat-option>
@@ -27,14 +27,15 @@
                 <div class="input-container1 row justify-content-between">
                     <label class="col-8" for="Lingua">Lingua</label>
                     <div class="col-4 end">
-                        <mat-select class="custom-input2">
-                            <mat-option *ngFor="let lingua of lingue" [value]="lingue[indiceTemaAttivo]">
+                        <mat-select class="custom-input2" [value]="lingue[indiceLinguaAttiva.index]" (selectionChange)="doSomethingImportant()">
+                            <mat-option *ngFor="let lingua of lingue" [value]="lingua">
                                 {{lingua}}
                             </mat-option>
                         </mat-select>
                     </div>
 
                 </div>
+
             </div>
 
             <hr>

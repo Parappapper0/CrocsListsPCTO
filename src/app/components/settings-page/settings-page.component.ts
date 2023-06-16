@@ -9,14 +9,12 @@ import { SettingManagerService } from 'src/app/services/setting-manager.service'
 })
 export class SettingsPageComponent implements OnInit {
     
-    temaPredefinito: string='';
     fontSizes !: {fontSizeText: number, fontSizeTitle: number};
     lingue !: string[];
     temi !: string[];
-    
 
-    indiceLinguaAttiva : number = 0;
-    indiceTemaAttivo   : number = 0;
+    indiceLinguaAttiva !: {index: number};
+    indiceTemaAttivo   !: {index: number};
 
     comandoVocaleAttivo: boolean = false;
     parolaOrdine: string = 'Lista';
@@ -29,18 +27,17 @@ export class SettingsPageComponent implements OnInit {
         this.fontSizes = this.settingsService.fontSizes;
         this.lingue = this.settingsService.lingue;
         this.temi = this.settingsService.temi;
-        this.temaPredefinito=this.temi[0];
+        this.indiceLinguaAttiva = this.settingsService.linguaSelezionata;
+        this.indiceTemaAttivo = this.settingsService.temaSelezionato;
     }
 
     updateCarattere() {
 
-
         if(this.fontSizes.fontSizeText > 32) this.fontSizes.fontSizeText = 32;
         else if(this.fontSizes.fontSizeText < 8) this.fontSizes.fontSizeText = 8;
 
-        
-        console.log(this.fontSizes.fontSizeText);
-
         this.fontSizes.fontSizeTitle = this.fontSizes.fontSizeText * 2.5;
     }
+
+    doSomethingImportant() {}
 }
