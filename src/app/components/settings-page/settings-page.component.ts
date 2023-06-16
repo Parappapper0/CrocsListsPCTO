@@ -8,10 +8,12 @@ import { SettingManagerService } from 'src/app/services/setting-manager.service'
     styleUrls: ['./settings-page.component.scss'],
 })
 export class SettingsPageComponent implements OnInit {
-
+    
+    temaPredefinito: string='';
     fontSizes !: {fontSizeText: number, fontSizeTitle: number};
     lingue !: string[];
     temi !: string[];
+    
 
     indiceLinguaAttiva : number = 0;
     indiceTemaAttivo   : number = 0;
@@ -27,6 +29,7 @@ export class SettingsPageComponent implements OnInit {
         this.fontSizes = this.settingsService.fontSizes;
         this.lingue = this.settingsService.lingue;
         this.temi = this.settingsService.temi;
+        this.temaPredefinito=this.temi[0];
     }
 
     updateCarattere() {

@@ -15,9 +15,9 @@
                 <div class="input-container1 row justify-content-between">
                     <label class="col-8" for="Tema">Tema</label>
                     <div class="col-4 end">
-                        <mat-select class="custom-input2">
-                            <mat-option *ngFor="let tema of temi" [value]="temi[indiceTemaAttivo]">
-                                {{temi[indiceTemaAttivo]}}
+                        <mat-select class="custom-input2" [(value)]="temaPredefinito">
+                            <mat-option *ngFor="let tema of temi" [value]="tema">
+                                {{tema}}
                             </mat-option>
                         </mat-select>
                     </div>
