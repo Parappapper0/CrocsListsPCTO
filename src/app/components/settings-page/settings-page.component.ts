@@ -2,17 +2,15 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 
 import { SettingManagerService } from 'src/app/services/setting-manager.service';
 
-
 @Component({
   selector: 'app-settings-page',
   templateUrl: './settings-page.component.html',
   styleUrls: ['./settings-page.component.scss'],
 })
-
 export class SettingsPageComponent implements OnInit, DoCheck {
   fontSizeInput!: number;
-  varTema: string='Default';
-  varLingua: string='Italiano';
+  varTema: string = 'Default';
+  varLingua: string = 'Italiano';
 
   comandoVocaleAttivo: boolean = false;
   parolaOrdine: string = 'Lista';
@@ -29,7 +27,7 @@ export class SettingsPageComponent implements OnInit, DoCheck {
     this.updateFontSizes();
   }
 
-      ngDoCheck() {
+  ngDoCheck() {
     this.applyFontSize();
   }
 
@@ -42,15 +40,8 @@ export class SettingsPageComponent implements OnInit, DoCheck {
     }
 
     for (let i = 0; i < h1s.length; i++) {
-      h1s[i].style.fontSize = this.serviceFontSize.applyFontSizes(this.fontSizeInput) + 'px';
+      h1s[i].style.fontSize =
+        this.serviceFontSize.applyFontSizes(this.fontSizeInput) + 'px';
     }
   }
 }
-
-
-
-
-/*
-this.fontSizec.emit(this.fontSize);
-@Output() fontSizec = new EventEmitter<number>();
-*/

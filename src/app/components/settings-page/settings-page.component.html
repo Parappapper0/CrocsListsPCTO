@@ -7,7 +7,7 @@
   <style id="custom-styles"></style>
 </head>
 
-  <body [ngStyle]="{'font-size': fontSizeInput + 'px'}">
+<body [ngStyle]="{'font-size': fontSizeInput + 'px'}">
   <div class="container">
     <div class="column">
       <h1>⎯Generali⎯⎯⎯⎯⎯</h1>
@@ -19,9 +19,6 @@
             <mat-form-field class="inm">
               <input matInput type="number" id="dimensione-carattere" [(ngModel)]="fontSizeInput" class="custom-input">
             </mat-form-field>
-
-            <!--input type="number" id="dimensione-carattere" [(ngModel)]="fontSizeInput" style="width: 50px; text-align: center">
-            <button (click)="applyFontSize()">Conferma</button-->
           </div>
         </li>
 
@@ -80,15 +77,15 @@
           <div class="button-container">
             <label for="account">Account</label>
             <div class="example-button-row">
-            <a mat-fab extended routerLink="/login-page">
-              <mat-icon>login</mat-icon>
-              Accedi
-            </a>
-            <a mat-fab extended routerLink="/sign-in">
-              <mat-icon>home</mat-icon>
-              Registrati
-            </a>
-          </div>
+              <a mat-fab extended routerLink="/login-page">
+                <mat-icon>login</mat-icon>
+                Accedi
+              </a>
+              <a mat-fab extended routerLink="/sign-in">
+                <mat-icon>home</mat-icon>
+                Registrati
+              </a>
+            </div>
           </div>
         </li>
       </ul>
