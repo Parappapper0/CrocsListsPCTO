@@ -8,6 +8,13 @@ body {
     display: flex;
 }
 
+#parola-ordine {
+
+    margin-left: auto;
+    min-width: 69%;
+    margin-right: 0;
+}
+
 .column {
 
     background-color: #C2ECDD;
@@ -45,7 +52,7 @@ input[type="text"] {
 }
 
 #dimensione-carattere {
-    width: 40px;
+    min-width: 40px;
 }
 
 .button-container {
@@ -101,13 +108,24 @@ input[type="text"] {
 #accedi {
 
     margin-right: 0;
-    margin-left: -12%;
+    margin-left: -5px;
+    scale: 0.6;
+
+    @media (min-width: 600px) {
+        scale: 0.75;
+        margin-left: -12px;
+    }
 }
 
 #registrati {
 
-    margin-right: 0;
+    margin-right: -25px;
     margin-left: auto;
+    scale: 0.6;
+
+    @media (min-width: 600px) {
+        scale: 0.75;
+    }
 }
 
 .hideSmall {
@@ -117,4 +135,9 @@ input[type="text"] {
     @media (min-width: 1000px) {
         display: inline;
     }
+}
+
+#tema, #lingua {
+
+    min-width: 500px !important;
 }
