@@ -1,0 +1,70 @@
+#comando {
+
+    margin-bottom: 2%;
+}
+
+#in {
+
+    width: 100%;
+}
+
+#move-a-bit-left {
+    padding-right: 0;
+    margin-right: 1%;
+
+    @media (min-width: 576px) {
+
+        margin-right: 4%;
+    }
+
+    @media (min-width: 768px) {
+
+        margin-right: 6%;
+    }
+
+    @media (min-width: 992px) {
+
+        margin-right: 7%;
+    }
+
+    @media (min-width: 1200px) {
+
+        margin-right: 8%;
+    }
+}
+
+#to-right {
+
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    align-items: center;
+}
+
+h2 {
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: #139B5C;
+    margin-top: -5%;
+}
+
+#btn {
+
+    right: 2%
+}
+
+div {
+
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#nopad {
+
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#container {
+
+    background-color: #E6F7F1;
+}

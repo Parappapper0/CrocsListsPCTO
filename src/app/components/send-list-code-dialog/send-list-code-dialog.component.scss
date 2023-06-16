@@ -1,0 +1,55 @@
+#comando {
+
+    margin-bottom: 2%;
+}
+
+#out {
+
+    width: 100%;
+    word-wrap: break-word;
+}
+
+#pls {
+    height: content;
+    z-index: 100;
+}
+
+#to-right {
+
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    //position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+}
+
+h2 {
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: #139B5C;
+    margin-top: 0;
+}
+
+#btn {
+
+    right: 2%;
+    margin-bottom: -5%;
+}
+
+div {
+
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#nopad {
+
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#container {
+
+    background-color: #E6F7F1;
+}
