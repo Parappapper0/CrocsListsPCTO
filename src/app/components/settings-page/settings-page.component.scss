@@ -14,7 +14,6 @@ body {
 }
 
 h1 {
-  font-size: 40px;
   margin-top: 0;
 }
 
@@ -39,13 +38,23 @@ li {
 .input-container {
   display: flex;
   align-items: center;
+  height: auto;
+}
+.input-container1{
+  display: flex;
+  align-items: center;
+  height: 50px
 }
 
 input[type="text"],
 select {
   width: 100%;
-  padding: 5px;
+  padding: auto;
   margin-left: auto;
+}
+
+#dimensione-carattere {
+  width: 40px;
 }
 
 .checkbox-container1 {
@@ -123,3 +132,25 @@ select {
   font-weight: bold;
 }
 
+.custom-input .mat-input-element {
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.custom-input2 {
+  width: 600px;
+  height: auto;
+  text-align: left;
+}
+
+.inm {
+  width: 60px;
+  margin-left: auto;
+  text-align: center;
+}
+.inm2 {
+  width: 85px;
+  margin-left: auto;
+  text-align: center;
+}
